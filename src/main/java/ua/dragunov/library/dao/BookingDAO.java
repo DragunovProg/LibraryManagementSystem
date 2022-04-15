@@ -1,10 +1,12 @@
 package ua.dragunov.library.dao;
 
 import ua.dragunov.library.database.LibraryDataSource;
+import ua.dragunov.library.model.Book;
 import ua.dragunov.library.model.Booking;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookingDAO implements DatabaseExecutable<Booking>{
@@ -92,6 +94,27 @@ public class BookingDAO implements DatabaseExecutable<Booking>{
 
     @Override
     public List<Booking> getAll() {
-        return null;
+        List<Booking> bookings = new ArrayList<>();
+        try(Connection connection = dataSource.getConnection()) {
+            Statement getAllStatement = connection.createStatement();
+            ResultSet resultSet = getAllStatement.executeQuery("SELECT * FROM Booking");
+
+            while (resultSet.next()) {
+                Booking booking = new Booking();
+
+                booking.setId(resultSet.getLong(1));
+                booking.setUser(userDAO.getById(resultSet.getLong(2)));
+                booking.setBook(bookDAO.getById(resultSet.getLong(3)));
+                booking.setStartBookingDate(resultSet.getDate(4).toLocalDate());
+                booking.setEndBookingDate(resultSet.getDate(5).toLocalDate());
+
+                bookings.add(booking);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return bookings;
     }
+
 }

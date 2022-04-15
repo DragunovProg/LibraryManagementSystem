@@ -18,20 +18,23 @@ public class LibraryDataSource {
         PGSimpleDataSource libraryDatasource = new PGSimpleDataSource();
 
         try(FileReader propertiesReader =
-                    new FileReader("src/main/resources/application.properties")) {
+                    new FileReader("D:/git/LibraryManagementSystem/src/main/resources/application.properties")) {
 
             Properties databaseProperties = new Properties();
             databaseProperties.load(propertiesReader);
 
-            libraryDatasource.setURL(databaseProperties.getProperty("postgresUrl"));
-            libraryDatasource.setUser(databaseProperties.getProperty("postgresUser"));
-            libraryDatasource.setPassword(databaseProperties.getProperty("postgresPassword"));
+            libraryDatasource.setURL(databaseProperties.getProperty("databaseUrl"));
+            libraryDatasource.setUser(databaseProperties.getProperty("databaseUser"));
+            libraryDatasource.setPassword(databaseProperties.getProperty("databasePassword"));
         } catch (FileNotFoundException e) {
             LOGGER.info("LibraryDataSource::getLibraryDataSource : ", e);
         } catch (IOException e) {
             LOGGER.info("LibraryDataSource::getLibraryDataSource : ", e);
         }
 
+
         return libraryDatasource;
     }
+
+
 }

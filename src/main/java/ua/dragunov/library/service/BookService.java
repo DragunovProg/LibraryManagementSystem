@@ -7,7 +7,6 @@ import java.util.List;
 
 public class BookService implements LibraryService<Book>{
     private static final BookDAO bookDAO = BookDAO.getBookDAOInstance();
-    public static List<Book> books = bookDAO.getAll();
 
     @Override
     public void create(Book book) {
@@ -34,8 +33,4 @@ public class BookService implements LibraryService<Book>{
         return bookDAO.getAll();
     }
 
-    public static void main(String[] args) {
-
-        System.out.println(new BookService().getAll());
-    }
 }
