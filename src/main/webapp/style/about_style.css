@@ -36,19 +36,17 @@ a {
     text-decoration: none;
 }
 
-#about_text {
-    color: white;
-    position: absolute;
-    text-align: right;
-    left: 85%;
-    top: 30px;
-    font-size: 40px;
-}
-
 .footer {
     height: 60px;
     width: 100%;
     padding: 0 8%;
     background: #080008;
+    position: relative;
+}
+#about_image {
+    position: relative;
+}
+
+#description {
     position: relative;
 }

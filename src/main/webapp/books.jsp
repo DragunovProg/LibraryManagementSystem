@@ -1,12 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: dragu
-  Date: 20.03.2022
-  Time: 14:09
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
@@ -20,7 +12,12 @@
             <td><h3>${book.year}</h3></td>
             <td><h3>${book.quantity}</h3></td>
             <td><h3>${book.authors}</h3></td>
+            <td><h3><form method="post" action="<c:url value='/deleteBook'/>">
+                <input type="number" hidden name="id" value="${book.id}"/>
+                <input type="submit" name="delete" value="delete"/>
+            </form></h3></td>
         </tr>
+
     </c:forEach>
 
 </table>

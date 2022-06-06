@@ -1,13 +1,14 @@
 package ua.dragunov.library.dao;
 
 import ua.dragunov.library.database.LibraryDataSource;
-import ua.dragunov.library.model.Book;
 import ua.dragunov.library.model.Booking;
+
 
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class BookingDAO implements DatabaseExecutable<Booking>{
     private static final DataSource dataSource = LibraryDataSource.getLibraryDataSource();

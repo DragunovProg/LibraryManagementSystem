@@ -1,5 +1,6 @@
 package ua.dragunov.library.model;
 
+
 public class Book {
     private long id;
     private String title;

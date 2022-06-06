@@ -33,4 +33,7 @@ public class BookService implements LibraryService<Book>{
         return bookDAO.getAll();
     }
 
+    public static void main(String[] args) {
+        new BookService().delete(BookDAO.getBookDAOInstance().getById(3));
+    }
 }

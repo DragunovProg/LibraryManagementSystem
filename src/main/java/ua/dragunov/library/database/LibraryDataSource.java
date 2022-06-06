@@ -10,7 +10,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class LibraryDataSource {
-    private static final Logger LOGGER = Logger.getLogger(LibraryDataSource.class);
+    /*private static final Logger LOGGER = Logger.getLogger(LibraryDataSource.class);*/
+
 
     private LibraryDataSource() {}
 
@@ -27,9 +28,9 @@ public class LibraryDataSource {
             libraryDatasource.setUser(databaseProperties.getProperty("databaseUser"));
             libraryDatasource.setPassword(databaseProperties.getProperty("databasePassword"));
         } catch (FileNotFoundException e) {
-            LOGGER.info("LibraryDataSource::getLibraryDataSource : ", e);
+           /* LOGGER.info("LibraryDataSource::getLibraryDataSource : ", e);*/
         } catch (IOException e) {
-            LOGGER.info("LibraryDataSource::getLibraryDataSource : ", e);
+           /* LOGGER.info("LibraryDataSource::getLibraryDataSource : ", e);*/
         }
 
 

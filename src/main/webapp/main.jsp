@@ -8,11 +8,13 @@
 <body>
     <div class="header">
         <div><span id="first_letter">L</span><span id="other_letter">ibrary</span></div>
-        <a href="#"><span id="about_text">About</span></a>
+        <a href="about.jsp"><span id="about_text">About</span></a>
 
     </div>
     <div class="main">
-
+        <div class="container">
+            <form action="" method="post"></form>
+        </div>
     </div>
     <div class="footer">
         
