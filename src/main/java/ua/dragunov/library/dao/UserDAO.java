@@ -118,7 +118,7 @@ public class UserDAO implements DatabaseExecutable<User>, UserGettable {
 
         try (Connection connection = dataSource.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(getSQL);
-            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setString(1, email);
             ResultSet userResult = preparedStatement.executeQuery();
             userResult.next();
 
@@ -153,5 +153,9 @@ public class UserDAO implements DatabaseExecutable<User>, UserGettable {
         }
 
         return user;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(UserDAO.getUserDAOInstance().getById(1));
     }
 }

@@ -4,51 +4,154 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #dcdada;
+}
+
+/*  header  */
 .header {
-    height: 80px;
-    width: 100%;
-    padding: 0 8%;
-    background: #080008;
-    position: relative;
-
+    height: 15vh;
+    background-color: #080008;
 }
 
-.main {
-    height: 76.7vh;
-    width: 100%;
-    padding: 0 8%;
-    background: #3A3845;
-    position: relative;
-}
-#first_letter {
-    position: relative;
-    top: 12px;
-    color: crimson;
-    font-size: 60px;
-}
-#other_letter {
-    position: relative;
-    top: 12px;
-    color: #ffffff;
-    font-size: 40px;
-}
-a {
-    text-decoration: none;
+.header__inner {
+    display: flex;
+    justify-content: space-between;
 }
 
-#about_text {
+.logo {
+    margin: 40px 0px;
+    font-size: 2em;
     color: white;
-    position: absolute;
-    text-align: right;
-    left: 85%;
-    top: 30px;
-    font-size: 40px;
 }
 
-.footer {
-    height: 60px;
-    width: 100%;
-    padding: 0 8%;
-    background: #080008;
-    position: relative;
+.about__us {
+    margin: 40px 0px;
+    padding: 0.2em 1em;
+    background-color: #b00020;
+    border-radius: 20px;
 }
+
+
+
+.about__link {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+.container {
+    margin: 0px 130px;
+}
+
+/*Main*/
+.login__form {
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px;
+}
+.login {
+    background-color: #3A3845;
+    padding: 3em 2em;
+    border-radius: 20px;
+}
+
+.sumbit {
+    text-align: center;
+    position: center;
+
+}
+
+input {
+    margin: 20px 0px;
+}
+
+input[type="email"] {
+    font-size: 2em;
+    border-radius: 10px;
+    border: none;
+    padding: 3px;
+}
+
+input[type="password"] {
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+input[type="submit"] {
+    background-color: #52515e;
+    font-size: 2.3em;
+    height: 10vh;
+    width: 200px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+}
+
+.register {
+    font-size: 1.3em;
+    text-align: center;
+    color: white;
+}
+
+.sign__up__link {
+    color: #7366c0;
+    margin: 0px 25px;
+}
+
+
+.error {
+    color: #b00020;
+    font-size: 2em;
+    text-align: center;
+}
+
+.startpage__link {
+    text-decoration: none;
+    color: white;
+}
+
+/* user page */
+
+.user__email {
+    color: white;
+    margin: 50px 0px;
+    font-size: 1.5em;
+}
+
+.orders__table {
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1.5em
+}
+th,
+td {
+    padding: 10px 15px;
+}
+thead {
+    background: #395870;
+    color: #fff;
+}
+th {
+    font-weight: bold;
+}
+tbody tr:nth-child(even) {
+    background: #f0f0f2;
+}
+td {
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+}
+td:first-child {
+    border-left: 1px solid #cecfd5;
+}
+

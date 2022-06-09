@@ -52,6 +52,7 @@ public class BookingDAO implements DatabaseExecutable<Booking>{
                     .prepareStatement("SELECT * FROM Booking WHERE id = ?");
             getByIdStatement.setLong(1, id);
             ResultSet resultSet = getByIdStatement.executeQuery();
+            resultSet.next();
 
             booking.setId(resultSet.getLong(1));
             booking.setUser(userDAO.getById(resultSet.getLong(2)));
@@ -99,7 +100,6 @@ public class BookingDAO implements DatabaseExecutable<Booking>{
         try(Connection connection = dataSource.getConnection()) {
             Statement getAllStatement = connection.createStatement();
             ResultSet resultSet = getAllStatement.executeQuery("SELECT * FROM Booking");
-
             while (resultSet.next()) {
                 Booking booking = new Booking();
 
