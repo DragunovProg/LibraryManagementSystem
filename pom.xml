@@ -57,6 +57,14 @@
 
   <build>
     <finalName>LibraryManagementSystem</finalName>
+    <resources>
+      <resource>
+        <directory>src/main/webapp/pictures</directory>
+        <includes>
+          <include>*.png</include>
+        </includes>
+      </resource>
+    </resources>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -90,5 +98,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
   </build>
 </project>

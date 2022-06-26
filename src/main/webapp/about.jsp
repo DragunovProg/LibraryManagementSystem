@@ -19,6 +19,7 @@
                 <div class="logo"><a class="startpage__link" href="/">ModernLibrary</a></div>
             </div>
         </div>
+        <img src="pictures/city_library.jpg" alt="">
     </header>
 </body>
 </html>

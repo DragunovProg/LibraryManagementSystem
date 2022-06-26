@@ -81,7 +81,7 @@ input[type="password"] {
     padding: 3px;
 }
 
-input[type="submit"] {
+input[name="submit"] {
     background-color: #52515e;
     font-size: 2.3em;
     height: 10vh;
@@ -155,3 +155,56 @@ td:first-child {
     border-left: 1px solid #cecfd5;
 }
 
+.update__button {
+
+}
+
+.edit__form {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.edit__column {
+    text-align: center;
+    position: center;
+}
+
+input[name="book__title"] {
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+input[name="book__start__date"] {
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+input[name="book__end__date"] {
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+input[name="edit__submit"] {
+    background-color: #52515e;
+    font-size: 2.3em;
+    height: 10vh;
+    width: 200px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+}
+
+.edit__submit {
+    position: center;
+    margin: 0 95px;
+}

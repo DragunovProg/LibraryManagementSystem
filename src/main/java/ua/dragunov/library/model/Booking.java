@@ -7,6 +7,8 @@ public class Booking {
     private long id;
     private User user;
     private Book book;
+
+
     private LocalDate startBookingDate;
     private LocalDate endBookingDate;
 

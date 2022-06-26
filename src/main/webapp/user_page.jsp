@@ -39,6 +39,12 @@
                         <td>${booking.book.title}</td>
                         <td>${booking.startBookingDate}</td>
                         <td>${booking.endBookingDate}</td>
+                        <td>
+                            <form action="/edit">
+                                <input type="number" hidden name="id" value="${booking.id}">
+                                <input type="submit" name="edit__submit" value="edit">
+                            </form>
+                        </td>
                     </tbody>
                 </tr>
                 </c:forEach>
