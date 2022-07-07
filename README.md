@@ -1,5 +1,5 @@
 # LibraryManagementSystem
-  Test project for practical study and use of basic libraries and components Java
+  Test project for practical study and use of basic Java libraries and  components
   
   ### * Technologies* :
   
