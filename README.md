@@ -1,10 +1,10 @@
 ## LibraryManagementSystem
   Test project for practical study and use of basic libraries and components Java
   
-  #*Technologies* :
+  *Technologies* :
   
-    - Java Core
-    - JDBC
-    - JSP and Servlets
+  * Java Core
+  * JDBC
+  * JSP and Servlets
     
   Database : Postgresql
